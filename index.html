@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Пошук зображень</title>
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.css"
@@ -14,11 +13,11 @@
       href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css"
     />
     <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-QoNpwPOl.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-zzuA1Tht.css">
   </head>
   <body>
     <div class="container">
-      <form class="search-form" id="search-form">
+      <form class="form" id="search-form">
         <input
           type="text"
           name="searchQuery"
@@ -28,18 +27,17 @@
         <button type="submit">Search</button>
       </form>
 
-      <div class="gallery"></div>
+      <ul class="gallery"></ul>
 
       <button type="button" class="load-more-btn">Load more</button>
 
-      <div class="loader">
+      <span class="loader">
         <p class="loading-message">Loading images, please wait...</p>
-      </div>
+      </span>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.2/dist/simple-lightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
-
   </body>
 </html>
