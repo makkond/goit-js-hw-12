@@ -21,7 +21,7 @@ body {
   padding: 20px;
 }
 
-.search-form {
+.form {
   display: flex;
   justify-content: center;
   margin: 30px auto;
@@ -29,7 +29,7 @@ body {
   gap: 10px;
 }
 
-.search-form input {
+.form input {
   width: 100%;
   max-width: 400px;
   padding: 10px 15px;
@@ -41,21 +41,21 @@ body {
   color: #555;
 }
 
-.search-form input::placeholder {
+.form input::placeholder {
   color: #999;
   font-size: 16px;
 }
 
-.search-form input:hover {
+.form input:hover {
   border-color: #aaa;
 }
 
-.search-form input:focus {
+.form input:focus {
   border-color: #4285f4;
   box-shadow: 0 0 0 1px #4285f4;
 }
 
-.search-form button {
+.form button {
   padding: 10px 20px;
   font-size: 16px;
   background-color: #4e75ff;
@@ -67,12 +67,12 @@ body {
   font-weight: 500;
 }
 
-.search-form button:hover {
+.form button:hover {
   background-color: #6c8cff;
 }
 
-.search-form button:active {
-  background-color: #2a56c6;
+.form button:active {
+  background-color: #6c8cff;
 }
 
 .gallery {
@@ -80,6 +80,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-bottom: 30px;
+  list-style: none;
 }
 
 .photo-card {
@@ -144,7 +145,7 @@ body {
 }
 
 .load-more-btn:active {
-  background-color: #2a56c6;
+  background-color: #6c8cff;
 }
 
 .load-more-btn.show {
@@ -174,13 +175,13 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .search-form {
+  .form {
     flex-direction: column;
     align-items: center;
   }
 
-  .search-form input,
-  .search-form button {
+  .form input,
+  .form button {
     width: 100%;
     max-width: 100%;
   }

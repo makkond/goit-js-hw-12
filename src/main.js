@@ -8,7 +8,7 @@ import {
   hideLoadMoreButton,
 } from './js/render-functions.js';
 
-const searchForm = document.querySelector('.search-form');
+const searchForm = document.querySelector('.form');
 const loadMoreBtn = document.querySelector('.load-more-btn');
 
 let currentQuery = '';
@@ -76,6 +76,7 @@ searchForm.addEventListener('submit', async event => {
         });
       }
     }
+
     if (currentPage > 1) {
       smoothScroll();
     }
@@ -128,9 +129,14 @@ loadMoreBtn.addEventListener('click', async () => {
 });
 
 function smoothScroll() {
-  const { height: cardHeight } = document
-    .querySelector('.gallery')
-    .firstElementChild.getBoundingClientRect();
+  const gallery = document.querySelector('.gallery');
+  if (!gallery || !gallery.firstElementChild) {
+    console.log('No cards to scroll to');
+    return;
+  }
+
+  const { height: cardHeight } =
+    gallery.firstElementChild.getBoundingClientRect();
 
   window.scrollBy({
     top: cardHeight * 2,
